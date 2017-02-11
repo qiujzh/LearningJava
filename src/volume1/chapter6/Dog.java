@@ -2,7 +2,7 @@ package volume1.chapter6;
 
 public abstract class Dog implements Animal {
 	
-	public abstract void barking();
+	public abstract void barking(); 
 	
 	@Override
 	public void eat() {
