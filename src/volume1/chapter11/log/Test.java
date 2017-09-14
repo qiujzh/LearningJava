@@ -1,4 +1,4 @@
-package volume11.log;
+package volume1.chapter11.log;
 
 public class Test {
 
