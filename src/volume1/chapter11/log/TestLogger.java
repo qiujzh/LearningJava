@@ -16,8 +16,9 @@ public class TestLogger {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Logger logger = setLoggerHander(Logger.getLogger("log.logger"), Level.INFO);
-		logger.info("My First Logger");
+		Logger logger = setLoggerHander(Logger.getLogger("log.logger"), Level.CONFIG);
+		logger.fine("FINE");
+		logger.config("CONFIG");
 	}
 	public static String getLogFilePath(){
 		StringBuffer logFilePath = new StringBuffer();
