@@ -1,4 +1,4 @@
-package threadcore;
+package threadcore.chapter1;
 
 public class Main {
 
