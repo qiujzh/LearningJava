@@ -1,14 +1,26 @@
 package volume1.chapter6;
 
+
+import volume1.chapter6.OutClass.InnerClass1;
+import volume1.chapter6.OutClass.InnerClass2;
+
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str1 = "1";
-		String str2 = str1;
-		str2 = "2";
-		System.out.println(str1); //print 1
-		System.out.println(str2); //print 2
+		final InnerClass1 in1 = new InnerClass1();
+		final InnerClass2 in2 = new InnerClass2();
+		Thread t1 = new Thread(new Runnable(){public void run(){
+			in1.method1(in2);
+		}},"T1");
+		Thread t2 = new Thread(new Runnable(){public void run(){
+			in1.method2();
+		}},"T2");
+		Thread t3 = new Thread(new Runnable(){public void run(){
+			in2.method1();
+		}},"T3");
+		t1.start();
+		t2.start();
+		t3.start();
 	}
-
 }
