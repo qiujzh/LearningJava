@@ -1,7 +1,13 @@
 package threadcore.chapter1;
-
+/**
+ * @author qiujzh
+ * @date 2018年11月15日
+ * @description currentThread()方法使用
+ */
 public class MyThread extends Thread{
-	
+	/**
+	 * @return
+	 */
 	public MyThread() {
 		System.out.println("MyThread begin");
 		System.out.println("----MyThread--Thread.currentThread().getName()：" + Thread.currentThread().getName());
