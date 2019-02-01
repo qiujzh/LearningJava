@@ -7,11 +7,16 @@ package threadcore.chapter1;
  */
 public class Main {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args){
 		System.out.println("begin");
 		for(int i = 0; i < 10; i++){
 			if(i == 5){
-				throw new Exception("123");
+				try {
+					throw new Exception("123");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			System.out.println("i = "+ i);
 		}
